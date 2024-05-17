@@ -1,0 +1,156 @@
+INSERT INTO project.company(company_id, founder, year_founding, location, employee_number)
+VALUES ('Valve Corporation','Gabe Newell',1996 ,'Bellevue, Washington',360),
+       ('Riot Games','Marc Merrill',2006 , 'Santa Monica, California',4200),
+       ('Capcom', 'Kenzo Tsujimoto',1983, 'Osaka, Japan',3332),
+       ('Psyonix','Dave Hagewood',2000 ,' San Diego, California',132),
+       ('Blizzard Entertainment', 'Allen Adham',1991,'Irvine, California',4700),
+       ('Infinity Ward','Vince Zampella',2002,'Woodland Hills, California',444),
+       ('Rockstar Games','Sam Houser',1998,'New York City',2000),
+       ('Epic Games','Tim Sweeney',1991,'Cary, North Carolina',4000),
+       ('Ubisoft','Yves Guillemot',1986,'Saint-Mandé , France',19410);
+
+INSERT INTO project.game (game_id, company_id, release_year, purchase, users_number, genre, pegi_age_rating, offline, online, rating)
+VALUES
+    ('League of Legends', 'Riot Games', 2009, 'FTP', 67000000, 'MOBA', 12, false, true, 4.5),
+    ('Dota 2', 'Valve Corporation', 2013, 'FTP', 11000000, 'MOBA', 12, false, true, 4.5),
+    ('Counter-Strike: Global Offensive', 'Valve Corporation', 2012, 'PTW', 30000000, 'FPS', 18, true, true, 4.6),
+    ('Street Fighter V', 'Capcom', 2016, 'PTP', 2000000, 'Fighting', 16, true, true, 4.2),
+    ('Rocket League', 'Psyonix', 2015, 'PTW', 75000000, 'Sports', 3, true, true, 4.4),
+    ('Hearthstone', 'Blizzard Entertainment', 2014, 'FTP', 100000000, 'CCG', 7, false, true, 4.3),
+    ('Call of Duty Warzone', 'Infinity Ward', 2020, 'FTP', 100000000, 'Battle royale', 18, false, true, 4.2),
+    ('Assassin Creed Black Flag', 'Ubisoft', 2013, 'PTP', 15000000, 'Action-adventure', 18, true, true, 4.7),
+    ('Fortnite', 'Epic Games', 2017, 'PTW', 350000000, 'Battle royale', 12, true, true, 4.6),
+    ('Grand Theft Auto V', 'Rockstar Games', 2013, 'PTW', 150000000, 'Action-adventure', 18, true, true, 4.8),
+    ('World of Warcraft', 'Blizzard Entertainment', 2004, 'PTW', 100000000, 'MMORPG', 12, true, true, 4.5),
+    ('StarCraft 2', 'Blizzard Entertainment', 2010, 'FTP', 10000000, 'RTS', 12, true, true, 4.5);
+
+INSERT INTO project.platform(platform_id, manufacturer)
+VALUES ('Windows','Microsoft'),
+       ('IOS','Apple'),
+       ('macOS', 'Apple'),
+       ('Xbox 360', 'Microsoft'),
+       ('Xbox Series X/S', 'Microsoft'),
+       ('Xbox one', 'Microsoft'),
+       ('Android', 'Google'),
+       ('Linux', NULL),
+       ('PS3','Sony'),
+       ('PS4','Sony'),
+       ('PS5','Sony'),
+       ('Nintendo Switch', 'Foxconn Hosiden');
+
+
+INSERT INTO project.Game_Platform (game_id, platform_id)
+VALUES
+    ('League of Legends', 'Windows'),
+    ('League of Legends', 'macOS'),
+    ('League of Legends', 'Linux'),
+    ('League of Legends', 'IOS'),
+    ('Dota 2', 'Windows'),
+    ('Dota 2', 'macOS'),
+    ('Dota 2', 'Linux'),
+    ('Dota 2', 'IOS'),
+    ('Counter-Strike: Global Offensive', 'Windows'),
+    ('Counter-Strike: Global Offensive', 'macOS'),
+    ('Counter-Strike: Global Offensive', 'Linux'),
+    ('Street Fighter V', 'Windows'),
+    ('Street Fighter V', 'PS4'),
+    ('Rocket League', 'Windows'),
+    ('Rocket League', 'PS4'),
+    ('Rocket League', 'Xbox one'),
+    ('Rocket League', 'Nintendo Switch'),
+    ('Hearthstone', 'Windows'),
+    ('Hearthstone', 'macOS'),
+    ('Hearthstone', 'IOS'),
+    ('Hearthstone', 'Android'),
+    ('Call of Duty Warzone', 'Windows'),
+    ('Call of Duty Warzone', 'PS4'),
+    ('Call of Duty Warzone', 'Xbox one'),
+    ('Assassin Creed Black Flag', 'Windows'),
+    ('Assassin Creed Black Flag', 'PS3'),
+    ('Assassin Creed Black Flag', 'PS4'),
+    ('Assassin Creed Black Flag', 'Xbox 360'),
+    ('Assassin Creed Black Flag', 'Xbox one'),
+    ('Fortnite', 'Windows'),
+    ('Fortnite', 'macOS'),
+    ('Fortnite', 'PS4'),
+    ('Fortnite', 'Xbox one'),
+    ('Fortnite', 'Nintendo Switch'),
+    ('Fortnite', 'IOS'),
+    ('Fortnite', 'Android'),
+    ('Grand Theft Auto V', 'Windows'),
+    ('Grand Theft Auto V', 'PS3'),
+    ('Grand Theft Auto V', 'PS4'),
+    ('Grand Theft Auto V', 'Xbox 360'),
+    ('Grand Theft Auto V', 'Xbox one'),
+    ('Grand Theft Auto V', 'PS5'),
+    ('Grand Theft Auto V', 'Xbox Series X/S'),
+    ('World of Warcraft', 'Windows'),
+    ('StarCraft 2', 'Windows');
+
+INSERT INTO project.team(team_id,full_name ,country, created_date, disbanded_date, total_earnings_us)
+VALUES ('FNC','Fnatic', 'London','2004-07-23',DEFAULT,20269155),
+       ('T1','SK Telecom T1','South Korea','2004-04-13',DEFAULT,13872035),
+       ('EDG','Edward Gaming','China','2013-08-05',DEFAULT,7170568),
+       ('KA','Kungarna', 'Sweden','2001-02-01',DEFAULT,135800),
+       ('EC','echo','Europe','2020-06-25',DEFAULT,312400),
+       ('MO','Method Orange','North America','2018-02-08','2020-06-26',178200),
+       ('TS','Team Spirit','Russia','2015-05-02',DEFAULT,29660276);
+
+INSERT INTO project.championship(game_id, championship_id, finals_date, location, winner_team, prize_pool_us)
+VALUES ('League of Legends', 'Season 1 World Championship','2011-06-20','Sweden','FNC',100000),
+       ('League of Legends','Season 3 World Championship','2013-10-04','United States','T1',2050000),
+       ('League of Legends','Worlds 21','2021-11-06','Iceland','EDG',495000),
+       ('League of Legends','Worlds 23','2023-11-19','South Korea','T1',445000),
+       ('World of Warcraft','Arena World Championship','2019-11-02','California','MO',330000),
+       ('World of Warcraft','Arena World Championship','2018-11-03','California','MO',280000),
+       ('World of Warcraft','AWC 2023 EU S2 Finals','2023-08-13','Europe','EC',150000),
+       ('World of Warcraft','AWC 2022 EU Finals','2022-07-17','Europe','KA',150000),
+       ('Dota 2','The International 2021','2021-10-17','Romania','TS',40018195),
+       ('Dota 2','The International 2023','2023-10-29','Seattle','TS',3143063),
+       ('Counter-Strike: Global Offensive','Dreamhack Winter 2013','2013-11-30','Sweden','FNC',250000),
+       ('Counter-Strike: Global Offensive','ESL One Katowice 2015','2015-03-15','Poland','FNC',250000);
+
+INSERT INTO project.player(player_id, country, age, tag_id, status)
+VALUES ('Lee Sang-hyeok','South Korea',27,'Hide on bush','active'),
+       ('Kang Chan-yong','South Korea',31,'Ambition','retired'),
+       ('Illya Mulyarchuk','Ukraine',21,'YATOROGOD','active'),
+       ('Johan Sundstein','Denmark',30,'BigDaddy','retired'),
+       ('Raphael Peltzer','Germany',32,'BunnyHoppor','active'),
+       ('Casper Notto','Norway',23,'HUNTERACE','active'),
+       ('Danil Kryshkovets','Russia',17,'donk','active'),
+       ('Mathieu Herbaut','France',23,'ZywOo','active'),
+       ('Hansol Kim','US',29,'HANSOL','active'),
+       ('Richard Tyler Blevins','US',32,'Ninja','active'),
+       ('Alexis Bernier','France',17,'zen','active'),
+       ('Evan Rogez','France',21,'M0nkey M00n','active'),
+       ('Benjy David Fish','United Kingdom',19,'benjyfishy','active'),
+       ('Ben Rosendahl','US',24,'Almond','active'),
+       ('Jordan Thomas','US',28,'HusKerrs','retired'),
+       ('Joona Sotala','Finland',26,'Serral','active'),
+       ('Park Ryung-woo','South Korea',28,'Dark','active'),
+       ('Saul Leonardo Mena','Dominican Republic',24,'MENARD','active'),
+       ('Naoki Nemoto','Japan',39,'NEMO','retired');
+
+INSERT INTO project.current_best_player(game_id, player_id, start_date)
+VALUES ('League of Legends','Lee Sang-hyeok','2013-01-13'),
+       ('Dota 2','Illya Mulyarchuk','2021-09-07'),
+       ('Hearthstone','Raphael Peltzer','2020-10-20'),
+       ('Counter-Strike: Global Offensive','Danil Kryshkovets','2021-05-17'),
+       ('World of Warcraft','Hansol Kim','2020-08-12'),
+       ('Rocket League','Alexis Bernier','2020-01-09'),
+       ('Fortnite','Benjy David Fish','2020-05-08'),
+       ('Call of Duty Warzone','Ben Rosendahl','2022-10-09'),
+       ('StarCraft 2','Joona Sotala','2019-07-01'),
+       ('Street Fighter V','Saul Leonardo Mena','2020-04-02');
+
+INSERT INTO project.best_player_history(game_id, player_id, start_time, end_time, action_taken)
+VALUES ('League of Legends','Kang Chan-yong','2011-08-18','2013-01-13','update'),
+       ('Dota 2','Johan Sundstein','2018-12-04','2021-09-07','update'),
+       ('Hearthstone','Casper Notto','2017-06-25','2020-10-20','update'),
+       ('Counter-Strike: Global Offensive','Mathieu Herbaut','2016-09-21','2021-05-17','update'),
+       ('World of Warcraft','Richard Tyler Blevins','2014-02-16','2020-08-12','update'),
+       ('Rocket League','Evan Rogez','2018-12-12','2020-01-09','update'),
+       ('Call of Duty Warzone','Jordan Thomas','2021-05-02','2022-10-09','update'),
+       ('StarCraft 2','Park Ryung-woo','2015-07-13','2019-07-01','update'),
+       ('Street Fighter V','Naoki Nemoto','2017-11-12','2020-04-02','update');
+
